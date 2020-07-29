@@ -38,12 +38,16 @@ public class UserInterface {
             }
             System.out.println("La cantidad de columnas no tiene un valor de entre 1 a 8");
         }
-        p = new Plane(this.rows, this.cols);
-        System.out.println(p.toString());
-        while (true) {
-            int c = 0;
-            System.out.println("Este es el mapa del avion:");
 
+        while (true) {
+            System.out.println();
+            System.out.println("Este es el mapa del avion:");
+            p = new Plane(this.rows, this.cols);
+            for (int i = 0; i < rows; i++) {
+                System.out.print((i + 1) + " " + p.toString());
+
+                System.out.println();
+            }
             System.out.println();
             System.out.println("¿Que desea hacer?");
             System.out.println("1. Ingresar pasajero");
@@ -78,7 +82,6 @@ public class UserInterface {
                     s.setCol(col);
 
                     System.out.println("¡Pasajero ingresado!");
-                    c++;
                     System.out.println();
                     p.toString();
                 }
