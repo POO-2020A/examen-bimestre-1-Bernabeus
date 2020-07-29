@@ -40,13 +40,10 @@ public class Plane {
         list.add("E");
         list.add("F");
         list.add("G");
+        list.add("H");
         String p1 = "";
-        for (int i = 1; i <= this.cols; i++) {
-            p1 = i + " ";
-            for (int j = 0; j < rows; j++) {
-                p1 = p1 + list.get(j);
-            }
-            p1 = p1 + "\n";
+        for (int i = 0; i < this.cols; i++) {
+            p1 = p1 + list.get(i);          
         }
         return p1;
     }
